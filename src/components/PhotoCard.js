@@ -1,16 +1,18 @@
 import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
 import './PhotoCard.scss';
-import { Card } from 'semantic-ui-react';
 
 function PhotoCard(props) {
     
     return (
         <Card className='photo-card'>
+            <Image src={props.url} />
             <Card.Content>
-                <h3>{props.title}</h3>
-                <p>{props.date}</p>
-                <img src={props.url} />
-                <p>{props.explanation}</p>
+                <h3 className='headline'>{props.title}</h3>
+                <Card.Description>
+                    <p className='description'>{props.explanation}</p>
+                </Card.Description>
+                <h5 className='dater'>Date: {props.date}</h5>
             </Card.Content>
         </Card>
     )

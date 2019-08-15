@@ -1,9 +1,15 @@
+.titler {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  padding-top: 2rem;
+}
+
 .App {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  margin: 4rem 0;
+  padding-bottom: 4rem;
+
 }
 
 .App-logo {

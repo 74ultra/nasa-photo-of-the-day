@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-    <h1>NASA Photo of the Day</h1>
+    <h1 className='titler'>NASA Photo of the Day</h1>
     <div className="App">
       <PhotoCard
         title={data.title}
