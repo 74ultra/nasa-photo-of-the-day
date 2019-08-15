@@ -11,6 +11,8 @@ function App() {
 
   const [data, setData] = useState({});
 
+  const [randData, setRandData] = useState({})
+
     
   
   useEffect(() => {
@@ -21,11 +23,7 @@ function App() {
         setData(res.data);
       
     })
-  }, []);
 
-  const [randData, setRandData] = useState({})
-
-  useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=o7dGJltoP3OqKjtIzhwX7BvD6dVL88BUpFMhUMmp&date=${randomDate}`)
       .then(results => {
         console.log(results.data);
@@ -33,6 +31,8 @@ function App() {
         setRandData(results.data);
       
     })
+
+
   }, []);
 
 
