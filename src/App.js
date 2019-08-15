@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import PhotoCard from './components/PhotoCard.js';
-import moment from 'moment';
 import { randDate } from './components/DateGenerator.js'
-import "./App.css";
+import "./App.scss";
 
 function App() {
   
@@ -37,11 +36,9 @@ function App() {
 
 
   return (
+    <>
+    <h1>NASA Photo of the Day</h1>
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span>🚀</span>!
-      </p>
       <PhotoCard
         title={data.title}
         date={data.date}
@@ -55,6 +52,8 @@ function App() {
         explanation={randData.explanation}
       />
     </div>
+
+    </>
   );
 }
 
